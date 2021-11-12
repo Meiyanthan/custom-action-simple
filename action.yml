@@ -1,0 +1,16 @@
+name: 'TimeZone'
+description: 'Universal timezon with hello world'
+
+inputs:
+  name-of-user:
+    description: 'Your Name'
+    required: true
+    default: 'TimeZone'
+
+outputs:
+  time:
+    description: 'The time of the message'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

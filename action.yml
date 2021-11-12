@@ -1,5 +1,5 @@
 name: 'TimeZone'
-description: 'Universal timezon with hello world'
+description: 'Universal timezon with Your Name'
 
 inputs:
   name-of-user:

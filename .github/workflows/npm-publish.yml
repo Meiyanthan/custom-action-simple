@@ -4,8 +4,10 @@
 name: Node.js Package
 
 on:
+  pull_request:
+    branches: [ main ]
   release:
-    types: [published]
+    types: [ published ]
 
 jobs:
   build:
@@ -16,7 +18,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm install
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

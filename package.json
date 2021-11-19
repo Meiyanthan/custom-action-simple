@@ -1,8 +1,12 @@
 {
   "name": "hello-world-js-action",
-  "version": "1.0.2",
+  "version": "1.0.31",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meiyanthan/custom-action-simple.git"
+  }, 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +19,5 @@
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Meiyanthan/custom-action-simple.git"
-  }  
+  } 
 }

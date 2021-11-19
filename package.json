@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Meiyanthan/custom-action-simple.git"
+    "url": "git://github.com/Meiyanthan/custom-action-simple.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["sample"],
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -1,6 +1,6 @@
 {
-  "name": "hello-world-js-action",
-  "version": "1.0.31",
+  "name": "@Meiyanthan/hello-world-js-action",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "repository": {

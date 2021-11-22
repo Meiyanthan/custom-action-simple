@@ -1,11 +1,11 @@
 {
-  "name": "hello-world-js-action-test",
-  "version": "1.0.2",
+  "name": "@Meiyanthan/hello-world-js-action-test",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Meiyanthan/custom-action-simple.git"
+    "url": "git://github.com/Meiyanthan/custom-action-simple.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

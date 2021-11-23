@@ -1,6 +1,6 @@
 {
-  "name": "@Meiyanthan/hello-world-js-action-test",
-  "version": "1.0.7",
+  "name": "@meiyanthan/hello-world-js-action-test",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "repository": {

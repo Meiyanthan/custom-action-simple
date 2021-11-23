@@ -18,7 +18,6 @@
     "@actions/github": "^5.0.0"
   },
    "publishConfig": {
-       "tag": "v1-latest",
-       "registry": "https://npm.pkg.github.com/@Meiyanthan"
-   }
+       "tag": "v1-latest"
+  }
 }

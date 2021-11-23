@@ -10,18 +10,7 @@ on:
     types: [ published ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - run: npm ci
-      - run: npm run build --if-present
-
-  publish-npm:
-    needs: build
+  publish-npm-and-gpr:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
@@ -29,26 +18,22 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - name: Publish to NPM
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@Meiyanthan"
+          npm config list
+          npm publish --access public
         env:
+          CI: true
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps: 
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-        with:
+        with: 
           node-version: 14
           registry-url: https://npm.pkg.github.com/
           scope: '@Meiyanthan'
-      - run: npm ci
-      - run: echo registry=https://npm.pkg.github.com/@Meiyanthan >> .npmrc
-      - run: npm publish
+      - name: Publish to GitHub Package Registry
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
